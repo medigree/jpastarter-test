@@ -16,6 +16,7 @@ services:
       - hapi.fhir.implementationguides.${ig_code}.version=${ig_version}
     volumes:
       - ./apps:/apps
+      - ./application.yaml:/app/application.yaml:ro
 
   ember:
     image: jkiddo/ember:latest
